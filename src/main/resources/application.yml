@@ -12,5 +12,5 @@ zuul:
         - limit: 5
           refresh-interval: 60
           type:
-            - origin
+            - url
   strip-prefix: true
