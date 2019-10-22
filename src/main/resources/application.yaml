@@ -1,0 +1,16 @@
+zuul:
+  routes:
+    serviceSimple:
+      path: /address
+      url: maps.googleapis.com/maps/api/geocode/json
+      apiKey: AIzaSyD2WijYaqFSa9skqpqXIyy1Sy2yiFdyX6s     
+  ratelimit:
+    enabled: true
+    repository: JPA
+    policy-list:
+      serviceSimple:
+        - limit: 5
+          refresh-interval: 60
+          type:
+            - origin
+  strip-prefix: true
