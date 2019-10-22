@@ -21,9 +21,12 @@ public class GeoCodingRateLimiter {
 			if(q.size() < REQUEST_LIMIT) //throttle condition..if more than 5 attempts in 1minute then say POST is unsuccessful
 			{
 				q.offer(timestamp); 
+				System.out.println("Response 200: OK, This request posted succesfully");
 				return true;
+			
 			}
-
+			
+			System.out.println("ERROR 429: Too many requests in this time frame");
 			return false;
 		}
 	}
