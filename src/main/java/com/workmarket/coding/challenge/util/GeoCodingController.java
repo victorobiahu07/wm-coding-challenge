@@ -25,6 +25,7 @@ public class GeoCodingController {
 	@Autowired
 	private Environment env;
 
+	/*In a POST request, the parameters are sent as a body of the request, after the headers.*/
 	@RequestMapping("/getGeoCoding")
 	public GeoCoding getGeoCodeForAddress(@RequestParam(value = "address", defaultValue="silicon+valley") String address) 
 	{
