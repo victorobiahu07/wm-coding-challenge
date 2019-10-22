@@ -34,3 +34,5 @@ I tried handling configuration according in the application.yml file
 GeoCoding.java and GeoCodingOutput.java worked with handling address input and formatting options
 
 Ran out of time to write exhaustive test cases for this
+Application should be run first on ChallengeApplication.java for SpringBoot to hit the googleMaps API
+GeoCodingRateLimiter.java can be run as a regular Java App for local tests
